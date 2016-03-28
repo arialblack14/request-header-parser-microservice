@@ -28,7 +28,9 @@ exports.language = function(ans) {
 exports.os = function(ans) {
   var os = "";
   // Check most common browsers from 'user-agent'
-  if (ans["user-agent"].match(/linux/i)) {
+  if (ans["user-agent"].match(/android/i)) {
+    os = 'Android';
+  } else if (ans["user-agent"].match(/linux/i)) {
     os = 'Linux';
   } else if (ans["user-agent"].match(/windows/i)) {
     os = 'Windows';
